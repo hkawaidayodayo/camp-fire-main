@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
+    <title>名言ジェネレーター</title>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+<main class="mt-2">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <h2 class="text-center">名言ジェネレーター</h2>
+                <div id="canvas" class="canvas"></div>
+                <hr>
+                <div class="text-right">
+                    <button class="btn btn-outline-primary png">PNGダウンロード</button>
+                    <button class="btn btn-outline-primary jpg">JPEGダウンロード</button>
+                </div>
+                <div class="card mt-2">
+                    <div class="card-header">
+                        <div class="d-flex align-items-center">
+                            <div class="mr-auto">アイテム一覧</div>
+                            <div class="form-inline">
+                                <label for="background">背景色</label>
+                                <input class="form-control mx-2 color" id="background" value="rgba(224,224,224,0.5)" data-jscolor="">
+                                <label for="width">幅</label>
+                                <input class="form-control mx-2" id="width" type="number" value="506" min="10" max="4096">
+                                <label for="height">高さ</label>
+                                <input class="form-control mx-2" id="height" type="number" value="253" min="10" max="4096">
+                            </div>
+                            <div class="btn-group ml-4" role="group">
+                                <i class="fa fa-plus-circle mr-2" aria-hidden="true"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card-body">
+                        <table class="table table-striped">
+                            <tr class="tr" style="display: none" data-id="0">
+                                <td style="width: 5%;">
+                                    <i class="fa fa-times-circle col-sm-2" aria-hidden="true"></i>
+                                </td>
+                                <td style="width: 60%;">
+                                    <input class="form-control text" placeholder="ココにお好きなテキストを入力">
+                                </td>
+                                <td style="width: 25%;">
+                                    <input class="form-control color" data-jscolor="">
+                                </td>
+                                <td style="width: 10%;">
+                                    <input class="form-control fontsize" type="number" value="40" min="20" max="200">
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</main>
+
+<footer class="small">
+    <div class="social-button">
+        <ul>
+            <li>
+                <a href="https://twitter.com/share?ref_src=twsrc%5Etfw" class="twitter-share-button" data-show-count="false">Tweet</a>
+            </li>
+            <li>
+                <a class="dropdown-item" href="#">利用規約とプライバシーポリシー</a>
+            </li>
+        </ul>
+</footer>
+<script src="js/jquery-3.5.1.slim.min.js"></script>
+<script src="js/jquery-ui.min.js"></script>
+<script src="js/popper.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/konva.min.js"></script>
+<script src="js/jscolor.js"></script>
+<script src="js/generator.js"></script>
+<script src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+</body>
+</html>
